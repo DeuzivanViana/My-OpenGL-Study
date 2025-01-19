@@ -1,9 +1,10 @@
 #ifndef APP_HPP
 #define APP_HPP
 
-#include "core/Window.hpp"
-
 #include <SDL2/SDL_events.h>
+
+#include "graphics/Rectangle.hpp"
+#include "core/Window.hpp"
 
 class App
 {
@@ -21,7 +22,9 @@ protected:
 
 private:
   Window __window;
-  SDL_Event __event;
+  Shader __shader;
+
+  Rectangle __rect;
 };
 
 #endif
